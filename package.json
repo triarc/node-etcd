@@ -1,5 +1,5 @@
 {
-  "name": "node-etcd",
+  "name": "node-etcd-7",
   "version": "5.0.3",
   "description": "etcd library for node.js (etcd v2 api)",
   "licenses": [
@@ -24,14 +24,14 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "node_modules/.bin/coffee --bare --compile --output lib/ src/*.coffee",
-    "prepublish": "node_modules/.bin/coffee --bare --compile --output lib/ src/*.coffee",
+    "build": "node_modules/.bin/coffee --bare --compile --output lib/ src",
+    "prepublish": "node_modules/.bin/coffee --bare --compile --output lib/ src",
     "postpublish": "rm -rf lib",
     "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register test/",
     "watch": "node_modules/.bin/mocha --compilers coffee:coffee-script/register --watch"
   },
   "dependencies": {
-    "deasync": "0.1.7",
+    "deasync": "0.1.9",
     "request": "2.60.0",
     "underscore": "1.8.2",
     "url-parse": "1.0.5"
